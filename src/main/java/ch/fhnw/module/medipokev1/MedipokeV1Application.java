@@ -8,10 +8,15 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication
 @RestController
 public class MedipokeV1Application {
+
     // First comment by David Duran
     public static void main(String[] args) {
         SpringApplication.run(MedipokeV1Application.class, args);
 
+    }
+
+    public String message(){
+        return "Help";
     }
 
     @GetMapping(value="/")
