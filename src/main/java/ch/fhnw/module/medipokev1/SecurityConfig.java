@@ -33,7 +33,7 @@ public class SecurityConfig {
                 */
                 //TODO: when logged-in with a certain user, you cannot access pages accessible via another user type. Is this authentication hierarchy ADMIN > USER?
                 .authorizeHttpRequests((authorize) -> authorize
-                        .requestMatchers("/", "/greeting").permitAll()
+                        .requestMatchers("/", "/greeting", "/h2-console/**").permitAll()
                         .requestMatchers("/nogreeting").hasRole("USER")
                         .requestMatchers("/admin").hasRole("ADMIN")
                         .anyRequest().denyAll()
