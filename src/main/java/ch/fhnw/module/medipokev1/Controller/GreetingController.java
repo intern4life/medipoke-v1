@@ -1,4 +1,4 @@
-package ch.fhnw.module.medipokev1;
+package ch.fhnw.module.medipokev1.Controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

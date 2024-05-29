@@ -1,4 +1,4 @@
-package ch.fhnw.module.medipokev1;
+package ch.fhnw.module.medipokev1.Configuration;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
