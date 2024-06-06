@@ -20,6 +20,12 @@ public class ContactDetails {
         return id;
     }
 
+    public ContactDetails(Long id, String contactEmail, String phoneNumber) {
+        this.id = id;
+        this.contactEmail = contactEmail;
+        this.phoneNumber = phoneNumber;
+    }
+
     public void setId(Long id) {
         this.id = id;
     }

@@ -38,20 +38,22 @@ public class MedipokeV1Application {
     @PostConstruct
     private void initPlaceholderData() throws Exception {
         //Patient creation
+        /*
         User userPatient = new User();
         userPatient.setUserRole(User.UserRole.PATIENT);
         userPatient.setGender(User.Gender.MALE);
         userPatient.setFirstName("John");
         userPatient.setLastName("Doe");
-        //userPatient.setDateOfBirth(Calendar.);
+        userPatient.setDateOfBirth(Calendar.);
 
-        //Admin creation
         User userAdmin = new User();
         userAdmin.setUserRole(User.UserRole.ADMIN);
         userAdmin.setGender(User.Gender.FEMALE);
         userAdmin.setFirstName("Clark");
         userAdmin.setLastName("Kent");
-        //userAdmin.setDateOfBirth(Calendar.);
+        userAdmin.setDateOfBirth(Calendar.);
+
+         */
 
         //From refernece project
         /*

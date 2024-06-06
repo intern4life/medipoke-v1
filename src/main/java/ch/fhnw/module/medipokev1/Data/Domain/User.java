@@ -1,11 +1,9 @@
 package ch.fhnw.module.medipokev1.Data.Domain;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import io.swagger.v3.oas.annotations.Hidden;
 import jakarta.persistence.*;
 
-import java.util.Calendar;
-import java.util.Date;
+import javax.naming.ldap.Control;
 
 @Entity
 @Table(name = "user")
@@ -37,7 +35,7 @@ public class User {
     private UserRole userRole;
 
     @Column(name = "date_of_birth")
-    private Calendar dateOfBirth;
+    private String dateOfBirth;
 
     @Column(name = "gender")
     private Gender gender;
@@ -47,6 +45,17 @@ public class User {
 
     //@OneToMany
     //private Schedule schedule;
+
+
+    public User(Long id, String firstName, String lastName, UserRole userRole, String dateOfBirth, Gender gender, ContactDetails contactDetails) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.userRole = userRole;
+        this.dateOfBirth = dateOfBirth;
+        this.gender = gender;
+        this.contactDetails = contactDetails;
+    }
 
     public String getFirstName() {
         return firstName;
@@ -76,11 +85,15 @@ public class User {
         return id;
     }
 
-    public Calendar getDateOfBirth() {
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getDateOfBirth() {
         return dateOfBirth;
     }
 
-    public void setDateOfBirth(Calendar dateOfBirth) {
+    public void setDateOfBirth(String dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
 
@@ -90,5 +103,9 @@ public class User {
 
     public void setGender(Gender gender) {
         this.gender = gender;
+    }
+
+    public ContactDetails getContactDetails() {
+        return contactDetails;
     }
 }
