@@ -6,7 +6,7 @@ import jakarta.persistence.*;
 @Entity
 @Table(name = "medication")
 public class Medication {
-    private enum DistributionCategory{
+    public enum DistributionCategory{
         A,
         B,
         C,
@@ -15,7 +15,7 @@ public class Medication {
         F
     }
 
-    private enum AdministrationType {
+    public enum AdministrationType {
         TABLETS,
         CAPSULES,
         SUBLINGUAL,
@@ -36,8 +36,8 @@ public class Medication {
     private Brand brand;
     @OneToOne
     private ChemicalSubstance chemicalSubstance;
-    @OneToMany
-    private Schedule schedule;
+    //@OneToMany
+    //private Schedule schedule;
 
     public Long getId() {
         return id;
@@ -83,23 +83,24 @@ public class Medication {
         return brand;
     }
 
-    public void setBrand(Brand brand) {
-        this.brand = brand;
+    public void setBrand(String brand) {
+        this.brand.setBrandName(brand);
     }
 
     public ChemicalSubstance getChemicalSubstance() {
         return chemicalSubstance;
     }
 
-    public void setChemicalSubstance(ChemicalSubstance chemicalSubstance) {
-        this.chemicalSubstance = chemicalSubstance;
+    public void setChemicalSubstance(String chemicalSubstance) {
+        this.chemicalSubstance.setChemicalName(chemicalSubstance);
     }
 
-    public Schedule getSchedule() {
+    /*public Schedule getSchedule() {
         return schedule;
     }
 
     public void setSchedule(Schedule schedule) {
         this.schedule = schedule;
     }
+     */
 }

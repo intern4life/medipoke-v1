@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import io.swagger.v3.oas.annotations.Hidden;
 import jakarta.persistence.*;
 
+import java.util.Calendar;
 import java.util.Date;
 
 @Entity
@@ -36,7 +37,7 @@ public class User {
     private UserRole userRole;
 
     @Column(name = "date_of_birth")
-    private Date dateOfBirth;
+    private Calendar dateOfBirth;
 
     @Column(name = "gender")
     private Gender gender;
@@ -44,8 +45,8 @@ public class User {
     @OneToOne
     private ContactDetails contactDetails;
 
-    @OneToMany
-    private Schedule schedule;
+    //@OneToMany
+    //private Schedule schedule;
 
     public String getFirstName() {
         return firstName;
@@ -75,15 +76,11 @@ public class User {
         return id;
     }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Date getDateOfBirth() {
+    public Calendar getDateOfBirth() {
         return dateOfBirth;
     }
 
-    public void setDateOfBirth(Date dateOfBirth) {
+    public void setDateOfBirth(Calendar dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
 
