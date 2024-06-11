@@ -3,8 +3,6 @@ package ch.fhnw.module.medipokev1.Data.Domain;
 import io.swagger.v3.oas.annotations.Hidden;
 import jakarta.persistence.*;
 
-import javax.naming.ldap.Control;
-
 @Entity
 @Table(name = "user")
 public class User {
@@ -40,21 +38,20 @@ public class User {
     @Column(name = "gender")
     private Gender gender;
 
-    @OneToOne
-    private ContactDetails contactDetails;
+    @Column(name = "email")
+    private String email;
 
-    //@OneToMany
-    //private Schedule schedule;
+    @Column(name = "phoneNumber")
+    private String phoneNumber;
 
-
-    public User(Long id, String firstName, String lastName, UserRole userRole, String dateOfBirth, Gender gender, ContactDetails contactDetails) {
-        this.id = id;
+    public User(String firstName, String lastName, UserRole userRole, String dateOfBirth, Gender gender, String email, String phoneNumber) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.userRole = userRole;
         this.dateOfBirth = dateOfBirth;
         this.gender = gender;
-        this.contactDetails = contactDetails;
+        this.email = email;
+        this.phoneNumber = phoneNumber;
     }
 
     public String getFirstName() {
@@ -85,10 +82,6 @@ public class User {
         return id;
     }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
-
     public String getDateOfBirth() {
         return dateOfBirth;
     }
@@ -105,7 +98,22 @@ public class User {
         this.gender = gender;
     }
 
-    public ContactDetails getContactDetails() {
-        return contactDetails;
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+    public User() {
+
     }
 }
