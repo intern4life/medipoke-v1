@@ -22,20 +22,13 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
 
-                /*.securityMatcher("/api/**")
-                .authorizeHttpRequests((authorize) -> authorize
-                        //.requestMatchers("/", "/greeting").permitAll()
-                        .requestMatchers("/nogreeting").hasRole("USER")
-                        .requestMatchers("/admin").hasRole("ADMIN")
-                        //.anyRequest().denyAll()
-                        .anyRequest().authenticated()
-                )
-                */
+                //.securityMatcher("/api/**")
                 .csrf(csrf -> csrf.disable())
                 //TODO: when logged-in with a certain user, you cannot access pages accessible via another user type. Is this authentication hierarchy ADMIN > USER?
                 .authorizeHttpRequests((authorize) -> authorize
                         .requestMatchers("/nogreeting").hasRole("USER")
-                        .requestMatchers("/admin", "/user", "/user/create", "/h2-console/**").hasRole("ADMIN")
+                        //.requestMatchers("/admin", "/users", "/users/create", "/users/{id}", "/users/{id}/update", "/users/{id}/delete", "/h2-console/**").hasRole("ADMIN")
+                        .requestMatchers("/admin", "/users/**", "/h2-console/**").hasRole("ADMIN")
                         .requestMatchers("/**", "/greeting", "/swagger-ui.html", "/v1/api-docs/**", "/swagger-ui/**").permitAll()
                         .anyRequest().denyAll()
                         //.anyRequest().authenticated()

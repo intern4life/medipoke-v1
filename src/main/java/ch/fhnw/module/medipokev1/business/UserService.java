@@ -12,12 +12,13 @@ public class UserService {
 
     @Autowired
     private UserRepository userRepository;
+
     public User addUser(User user) throws Exception {
 
-        if(user.getFirstName() != null) {
+        if (user.getFirstName() != null) {
             if (userRepository.findByEmail(user.getEmail()) == null || userRepository.findByPhoneNumber(user.getPhoneNumber()) == null)
                 return userRepository.save(user);
-            throw new Exception("User " + user.getFirstName() + " " + user.getLastName() +" with the birthdate " + user.getDateOfBirth() + " already exists");
+            throw new Exception("User " + user.getFirstName() + " " + user.getLastName() + " with the birthdate " + user.getDateOfBirth() + " already exists");
         }
         throw new Exception("Invalid user entry");
     }
@@ -32,5 +33,23 @@ public class UserService {
         } catch (Exception e) {
             throw new RuntimeException("User with id " + id + " not found");
         }
+    }
+
+    public User updateUser(Long id, User user){
+        User userToUpdate = userRepository.findById(id).get();
+        if (user.getEmail() != null)
+            userToUpdate.setEmail(user.getEmail());
+        if (user.getPhoneNumber() != null)
+            userToUpdate.setPhoneNumber(user.getPhoneNumber());
+        if (user.getGender() != null)
+            userToUpdate.setGender(user.getGender());
+        return userRepository.save(userToUpdate);
+    }
+
+    public void deleteUser(Long id) throws Exception {
+        if(userRepository.existsById(id)) {
+            userRepository.deleteById(id);
+        } else
+            throw new Exception("User with id " + id + " does not exist");
     }
 }

@@ -33,12 +33,12 @@ public class UserController {
     }
      */
 
-    @GetMapping(path="/user", produces = "application/json")
+    @GetMapping(path="/users", produces = "application/json")
     public List<User> getUserList() {
         return userService.getAllUsers();
     }
 
-    @PostMapping(path="/user/create", consumes="application/json", produces = "application/json")
+    @PostMapping(path="/users/create", consumes="application/json", produces = "application/json")
     public ResponseEntity addUser(@RequestBody User user) {
         try{
             user = userService.addUser(user);
@@ -49,8 +49,8 @@ public class UserController {
         return ResponseEntity.ok(user);
     }
 
-    @GetMapping(path="/user/{id}", produces = "application/json")
-    public ResponseEntity getPizza(@PathVariable Long id) {
+    @GetMapping(path="/users/{id}", produces = "application/json")
+    public ResponseEntity findUserById(@PathVariable Long id) {
         try{
             User user = userService.findUserById(id);
             return ResponseEntity.ok(user);
@@ -60,5 +60,24 @@ public class UserController {
         }
     }
 
+    @PutMapping(path="/users/{id}/update", consumes="application/json", produces = "application/json")
+    public ResponseEntity updateUser(@PathVariable Long id, @RequestBody User user) {
+        try{
+            user = userService.updateUser(id, user);
 
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.CONFLICT).body("No user found with given id");
+        }
+        return ResponseEntity.ok(user);
+    }
+
+    @DeleteMapping(path="/users/{id}/delete")
+    public ResponseEntity<String> deleteUser(@PathVariable Long id) {
+        try{
+            userService.deleteUser(id);
+            return ResponseEntity.ok("User with id " + id + " deleted");
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("User not found");
+        }
+    }
 }
