@@ -49,4 +49,16 @@ public class UserController {
         return ResponseEntity.ok(user);
     }
 
+    @GetMapping(path="/user/{id}", produces = "application/json")
+    public ResponseEntity getPizza(@PathVariable Long id) {
+        try{
+            User user = userService.findUserById(id);
+            return ResponseEntity.ok(user);
+        }
+        catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("No user found with given id");
+        }
+    }
+
+
 }

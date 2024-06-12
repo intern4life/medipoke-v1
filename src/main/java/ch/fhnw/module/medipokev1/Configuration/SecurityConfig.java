@@ -31,11 +31,12 @@ public class SecurityConfig {
                         .anyRequest().authenticated()
                 )
                 */
+                .csrf(csrf -> csrf.disable())
                 //TODO: when logged-in with a certain user, you cannot access pages accessible via another user type. Is this authentication hierarchy ADMIN > USER?
                 .authorizeHttpRequests((authorize) -> authorize
-                        .requestMatchers("/", "/greeting", "/h2-console/**", "/user", "/**").permitAll()
                         .requestMatchers("/nogreeting").hasRole("USER")
-                        .requestMatchers("/admin").hasRole("ADMIN")
+                        .requestMatchers("/admin", "/user", "/user/create", "/h2-console/**").hasRole("ADMIN")
+                        .requestMatchers("/**", "/greeting", "/swagger-ui.html", "/v1/api-docs/**", "/swagger-ui/**").permitAll()
                         .anyRequest().denyAll()
                         //.anyRequest().authenticated()
                 )
