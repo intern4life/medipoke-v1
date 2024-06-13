@@ -15,10 +15,10 @@ public class MedicationService {
     private MedicationRepository medicationRepository;
 
     public Medication addMedication(Medication medication) throws Exception {
-        if (medication.getChemicalSubstance() != null) {
-            if (medicationRepository.findByChemicalSubstance(medication.getChemicalSubstance()) == null)
+        if (medication.getBrand() != null) {
+            if (medicationRepository.findByBrand(medication.getBrand()) == null)
                 return medicationRepository.save(medication);
-            throw new Exception("Medication with the chemical substance " + medication.getChemicalSubstance() + " already exists");
+            throw new Exception("Medication with the brand " + medication.getBrand() + " already exists");
         }
         throw new Exception("Invalid medication entry");
     }

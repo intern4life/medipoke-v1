@@ -29,7 +29,7 @@ public class MedicationController {
             medication = medicationService.addMedication(medication);
 
         } catch (Exception e) {
-            return ResponseEntity.status(HttpStatus.CONFLICT).body("Medication already exists with given chemical substance");
+            return ResponseEntity.status(HttpStatus.CONFLICT).body("Medication already exists with given brand");
         }
         return ResponseEntity.ok(medication);
     }

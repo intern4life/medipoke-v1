@@ -39,12 +39,12 @@ public class Medication {
     private AdministrationType administrationType;
     @Column(name = "weight")
     private String weight;
-    @OneToOne
-    private Brand brand;
-    @OneToOne
-    private ChemicalSubstance chemicalSubstance;
+    @Column(name = "brand")
+    private String brand;
+    @Column(name = "chemical_substance")
+    private String chemicalSubstance;
 
-    public Medication(String sideEffects, Medication.DistributionCategory distributionCategory, Medication.AdministrationType administrationType, String weight, Brand brand, ChemicalSubstance chemicalSubstance) {
+    public Medication(String sideEffects, Medication.DistributionCategory distributionCategory, Medication.AdministrationType administrationType, String weight, String brand, String chemicalSubstance) {
         this.sideEffects = sideEffects;
         this.distributionCategory = distributionCategory;
         this.administrationType = administrationType;
@@ -93,20 +93,20 @@ public class Medication {
         this.weight = weight;
     }
 
-    public Brand getBrand() {
+    public String getBrand() {
         return brand;
     }
 
     public void setBrand(String brand) {
-        this.brand.setBrandName(brand);
+        this.brand = brand;
     }
 
-    public ChemicalSubstance getChemicalSubstance() {
+    public String getChemicalSubstance() {
         return chemicalSubstance;
     }
 
     public void setChemicalSubstance(String chemicalSubstance) {
-        this.chemicalSubstance.setChemicalName(chemicalSubstance);
+        this.chemicalSubstance = chemicalSubstance;
     }
 
     public Medication() {

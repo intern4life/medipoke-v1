@@ -22,6 +22,10 @@ public class Brand {
         this.producerName = producerName;
     }
 
+    public Brand() {
+
+    }
+
     public Long getId() {
         return id;
     }
