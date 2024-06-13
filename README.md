@@ -1,4 +1,5 @@
-# medipoke-v1
+# medipoke-v1 ![MEDIPOKE](https://github.com/intern4life/medipoke-v1/assets/168071156/7018ea06-df69-402c-a6c8-f1b8b336bbae)
+
 As a group project for the class Internet Technology at FHNW, MediPoke is an application platform, which sends users personalized reminders to take their medication at regular intervals.
 #### Contents:
 - [Analysis](#analysis)
