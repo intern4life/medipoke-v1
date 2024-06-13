@@ -19,6 +19,7 @@ MediPoke is a user-friendly application platform designed to help individuals ma
 
 ## Analysis
 ### Scenario
+"MediPoke" is a web application designed to help users to manage their medication schedules effectively. The application allows users to receive notifications when it's time to take their medication. Administrators set the desired reminder for the particular user and can manage the medication database, ensuring all medications are up to date and consumed on time.
 
 ### User Stories
 1. As a user, I want to view all my medications so that I can see what I need to take and when.
