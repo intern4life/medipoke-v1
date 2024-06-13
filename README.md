@@ -1,6 +1,6 @@
 # medipoke-v1 ![MEDIPOKE](https://github.com/intern4life/medipoke-v1/assets/168071156/7018ea06-df69-402c-a6c8-f1b8b336bbae)
 
-As a group project for the class Internet Technology at FHNW, MediPoke is an application platform, which sends users personalized reminders to take their medication at regular intervals.
+MediPoke is a user-friendly application platform designed to help individuals manage their medication schedules effectively. Developed as a group project for the Internet Technology course at FHNW, MediPoke delivers personalised reminders to ensure users never miss a dose.
 #### Contents:
 - [Analysis](#analysis)
   - [Scenario](#scenario)
@@ -19,19 +19,32 @@ As a group project for the class Internet Technology at FHNW, MediPoke is an app
 
 ## Analysis
 ### Scenario
+
 ### User Stories
+
 ### Use Case
+
 ## Design
+
 ### Prototype
+
 ### Domain Design
-### Business Logic 
+
+### Business Logic
+
 ## Implementation
 ### Backend Technology
+
 ### Frontend Technology
+
 ## Execution
+
 ### Deployment to a PaaS
+
 ## Project Management
+
 ### Roles
+
 ### Milestones
 1. **Analysis**: Scenario ideation, use case analysis and user story writing.
 2. **Prototype Design**: Creation of wireframe and prototype.
