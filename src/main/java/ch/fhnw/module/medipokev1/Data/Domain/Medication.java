@@ -1,6 +1,7 @@
 package ch.fhnw.module.medipokev1.Data.Domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import io.swagger.v3.oas.annotations.Hidden;
 import jakarta.persistence.*;
 
 @Entity
@@ -26,16 +27,23 @@ public class Medication {
         INJECTION
     }
     @Id
-    @JsonIgnore
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Hidden
+    @Column(name = "id", nullable = false)
     private Long id;
+    @Column(name = "side_effects")
     private String sideEffects;
+    @Column(name = "distribution_category")
     private DistributionCategory distributionCategory;
+    @Column(name = "administration_type")
     private AdministrationType administrationType;
+    @Column(name = "weight")
     private String weight;
     @OneToOne
     private Brand brand;
     @OneToOne
     private ChemicalSubstance chemicalSubstance;
+
     //@OneToMany
     //private Schedule schedule;
 

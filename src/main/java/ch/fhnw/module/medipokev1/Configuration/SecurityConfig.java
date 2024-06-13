@@ -24,11 +24,11 @@ public class SecurityConfig {
         http
 
                 //.securityMatcher("/api/**")
-                .csrf(AbstractHttpConfigurer::disable)
+                .csrf(csrf -> csrf.disable())
                 //TODO: when logged-in with a certain user, you cannot access pages accessible via another user type. Is this authentication hierarchy ADMIN > USER?
                 .authorizeHttpRequests((authorize) -> authorize
                         .requestMatchers("/nogreeting").hasRole("USER")
-                        .requestMatchers("/admin", "/users/**", "/h2-console/**").hasRole("ADMIN")
+                        //.requestMatchers("/admin", "/users/**", "/users", "/h2-console/**").hasRole("ADMIN")
                         .requestMatchers("/**", "/greeting", "/swagger-ui.html", "/v1/api-docs/**", "/swagger-ui/**").permitAll()
                         .anyRequest().denyAll()
                         //.anyRequest().authenticated()
