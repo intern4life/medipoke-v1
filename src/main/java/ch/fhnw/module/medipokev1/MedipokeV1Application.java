@@ -42,7 +42,7 @@ public class MedipokeV1Application {
         userService.addUser(user2);
         userService.addUser(user3);
 
-        Medication medication0 = new Medication("Headache", Medication.DistributionCategory.D, Medication.AdministrationType.TABLETS, "1000mg", new Brand("Dafalgan", "UPSA Switzerland AG"), new ChemicalSubstance("C8H9NO2, HOC6H4NHCOCH3", "Paracetamol"));
+        Medication medication0 = new Medication("Stomach ache", Medication.DistributionCategory.D, Medication.AdministrationType.TABLETS, "1000mg", new Brand("Dafalgan", "UPSA Switzerland AG"), new ChemicalSubstance("C8H9NO2", "Paracetamol"));
         medicationService.addMedication(medication0);
 
         //List<User> userList = new ArrayList();
