@@ -22,7 +22,10 @@ MediPoke is a user-friendly application platform designed to help individuals ma
 
 ### User Stories
 1. As a user, I want to view all my medications so that I can see what I need to take and when.
-2. 
+2. As a user, I want to view my reminders so that I can see my upcoming medication schedule.
+3. As an admin, I want to create/update/delete new/existing users
+4. As an admin, I want to view all medications in the database so that I can manage the available options.
+5. As an admin, I want to set notification to a selected user for a medication in the database so that the user receives notification on the assigned time.
 ### Use Case
 
 ## Design
