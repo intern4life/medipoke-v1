@@ -1,19 +1,26 @@
 package ch.fhnw.module.medipokev1.Data.Domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import io.swagger.v3.oas.annotations.Hidden;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "brand")
 public class Brand {
     @Id
-    @JsonIgnore
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Hidden
+    @Column(name = "id", nullable = false)
     private Long id;
-
+    @Column(name = "brand_name")
     private String brandName;
+    @Column(name = "producer_name")
     private String producerName;
+
+    public Brand(String brandName, String producerName) {
+        this.brandName = brandName;
+        this.producerName = producerName;
+    }
 
     public Long getId() {
         return id;

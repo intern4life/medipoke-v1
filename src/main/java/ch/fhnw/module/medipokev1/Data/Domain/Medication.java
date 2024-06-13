@@ -44,8 +44,14 @@ public class Medication {
     @OneToOne
     private ChemicalSubstance chemicalSubstance;
 
-    //@OneToMany
-    //private Schedule schedule;
+    public Medication(String sideEffects, Medication.DistributionCategory distributionCategory, Medication.AdministrationType administrationType, String weight, Brand brand, ChemicalSubstance chemicalSubstance) {
+        this.sideEffects = sideEffects;
+        this.distributionCategory = distributionCategory;
+        this.administrationType = administrationType;
+        this.weight = weight;
+        this.brand = brand;
+        this.chemicalSubstance = chemicalSubstance;
+    }
 
     public Long getId() {
         return id;
@@ -103,12 +109,8 @@ public class Medication {
         this.chemicalSubstance.setChemicalName(chemicalSubstance);
     }
 
-    /*public Schedule getSchedule() {
-        return schedule;
+    public Medication() {
+
     }
 
-    public void setSchedule(Schedule schedule) {
-        this.schedule = schedule;
-    }
-     */
 }

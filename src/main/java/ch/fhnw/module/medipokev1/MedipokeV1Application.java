@@ -1,6 +1,10 @@
 package ch.fhnw.module.medipokev1;
 
+import ch.fhnw.module.medipokev1.Data.Domain.Brand;
+import ch.fhnw.module.medipokev1.Data.Domain.ChemicalSubstance;
+import ch.fhnw.module.medipokev1.Data.Domain.Medication;
 import ch.fhnw.module.medipokev1.Data.Domain.User;
+import ch.fhnw.module.medipokev1.business.MedicationService;
 import ch.fhnw.module.medipokev1.business.UserService;
 import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +22,8 @@ import java.util.List;
 public class MedipokeV1Application {
     @Autowired
     private UserService userService;
+    @Autowired
+    private MedicationService medicationService;
 
     public static void main(String[] args) {
         SpringApplication.run(MedipokeV1Application.class, args);
@@ -35,6 +41,9 @@ public class MedipokeV1Application {
         userService.addUser(user1);
         userService.addUser(user2);
         userService.addUser(user3);
+
+        Medication medication0 = new Medication("Headache", Medication.DistributionCategory.D, Medication.AdministrationType.TABLETS, "1000mg", new Brand("Dafalgan", "UPSA Switzerland AG"), new ChemicalSubstance("C8H9NO2, HOC6H4NHCOCH3", "Paracetamol"));
+        medicationService.addMedication(medication0);
 
         //List<User> userList = new ArrayList();
         //userList.add(user0);
