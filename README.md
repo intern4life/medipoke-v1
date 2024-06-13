@@ -21,7 +21,8 @@ MediPoke is a user-friendly application platform designed to help individuals ma
 ### Scenario
 
 ### User Stories
-
+1. As a user, I want to view all my medications so that I can see what I need to take and when.
+2. 
 ### Use Case
 
 ## Design
