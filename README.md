@@ -1,4 +1,4 @@
-![Wireframe_MediPoke_Welcome Screen](https://github.com/intern4life/medipoke-v1/assets/168071156/8b023930-65d4-4693-a004-fd5945e37d8a)# medipoke-v1 ![MEDIPOKE](https://github.com/intern4life/medipoke-v1/assets/168071156/7018ea06-df69-402c-a6c8-f1b8b336bbae)
+# medipoke-v1 ![MEDIPOKE](https://github.com/intern4life/medipoke-v1/assets/168071156/7018ea06-df69-402c-a6c8-f1b8b336bbae)
 
 MediPoke is a user-friendly application platform designed to help individuals manage their medication schedules effectively. Developed as a group project for the Internet Technology course at FHNW, MediPoke delivers personalised reminders to ensure users never miss a dose.
 #### Contents:
