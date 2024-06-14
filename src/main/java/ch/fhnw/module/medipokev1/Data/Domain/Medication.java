@@ -1,6 +1,5 @@
 package ch.fhnw.module.medipokev1.Data.Domain;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import io.swagger.v3.oas.annotations.Hidden;
 import jakarta.persistence.*;
 
@@ -37,20 +36,24 @@ public class Medication {
     private DistributionCategory distributionCategory;
     @Column(name = "administration_type")
     private AdministrationType administrationType;
-    @Column(name = "weight")
-    private String weight;
+    @Column(name = "dosage")
+    private String dosage;
     @Column(name = "brand")
     private String brand;
     @Column(name = "chemical_substance")
     private String chemicalSubstance;
 
-    public Medication(String sideEffects, Medication.DistributionCategory distributionCategory, Medication.AdministrationType administrationType, String weight, String brand, String chemicalSubstance) {
-        this.sideEffects = sideEffects;
-        this.distributionCategory = distributionCategory;
-        this.administrationType = administrationType;
-        this.weight = weight;
+    @Column(name = "producer")
+    private String producer;
+
+    public Medication(String producer, String brand, String chemicalSubstance, Medication.AdministrationType administrationType, String dosage, String sideEffects, Medication.DistributionCategory distributionCategory) {
+        this.producer = producer;
         this.brand = brand;
         this.chemicalSubstance = chemicalSubstance;
+        this.administrationType = administrationType;
+        this.dosage = dosage;
+        this.sideEffects = sideEffects;
+        this.distributionCategory = distributionCategory;
     }
 
     public Long getId() {
@@ -85,12 +88,12 @@ public class Medication {
         this.administrationType = administrationType;
     }
 
-    public String getWeight() {
-        return weight;
+    public String getDosage() {
+        return dosage;
     }
 
-    public void setWeight(String weight) {
-        this.weight = weight;
+    public void setDosage(String weight) {
+        this.dosage = weight;
     }
 
     public String getBrand() {
@@ -113,4 +116,11 @@ public class Medication {
 
     }
 
+    public String getProducer() {
+        return producer;
+    }
+
+    public void setProducer(String producer) {
+        this.producer = producer;
+    }
 }

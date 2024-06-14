@@ -36,10 +36,10 @@ public class MedipokeV1Application {
         userService.addUser(user2);
         userService.addUser(user3);
 
-        Medication medication0 = new Medication("Stomach ache", Medication.DistributionCategory.D, Medication.AdministrationType.TABLETS, "1000mg", "Dafalgan", "Paracetamol");
-        Medication medication1 = new Medication("Stomach ache, sleepyness", Medication.DistributionCategory.D, Medication.AdministrationType.TABLETS, "500mg", "Tylenol", "Paracetamol");
-        Medication medication2 = new Medication("Dizziness", Medication.DistributionCategory.C, Medication.AdministrationType.TABLETS, "10mg", "Buscopan", "Hyoscine butylbromide");
-        Medication medication3 = new Medication("Stomach ache, dizziness", Medication.DistributionCategory.D, Medication.AdministrationType.TABLETS, "1000mg", "DuoFer", "Iron-Fumarate, Iron-Gluconate, Vitamin C");
+        Medication medication0 = new Medication("UPSA Switzerland AG", "Dafalgan", "N-acetyl-para-aminophenol", Medication.AdministrationType.TABLETS, "1000mg", "Stomach ache", Medication.DistributionCategory.D);
+        Medication medication1 = new Medication("McNeil Consumer Healthcare Ltd", "Tylenol", "N-acetyl-para-aminophenol", Medication.AdministrationType.TABLETS, "500mg", "Stomach ache, sleepyness", Medication.DistributionCategory.D);
+        Medication medication2 = new Medication("Sanofi Avenits (Schweiz) AG", "Buscopan", "Hyoscine butylbromide", Medication.AdministrationType.TABLETS, "10mg", "Dizziness", Medication.DistributionCategory.C);
+        Medication medication3 = new Medication("Andreabal AG", "DuoFer", "Iron-Fumarate, Iron-Gluconate, Vitamin C", Medication.AdministrationType.TABLETS, "1000mg", "Fullness of stomach, pressure in upper stomach, nausea", Medication.DistributionCategory.E);
 
         medicationService.addMedication(medication0);
         medicationService.addMedication(medication1);
