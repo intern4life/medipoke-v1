@@ -47,7 +47,8 @@ MediPoke is a user-friendly application platform designed to help individuals ma
 
 As mentioned before, for building the frontend we used as demanded budibase. The picture below shows the home screen for the user "patient" of MediPoke.
 
-<img width="1151" alt="image" src="https://github.com/intern4life/medipoke-v1/assets/161694712/e699f1e1-9270-4ff8-aa87-94b08cd1d3f0">
+![image](https://github.com/intern4life/medipoke-v1/assets/161694712/40967538-0028-4280-bc43-e4f44d907404)
+
 
 List of the different screens with the used Queries:
 
