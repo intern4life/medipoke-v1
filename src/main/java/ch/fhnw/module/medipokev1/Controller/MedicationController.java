@@ -44,4 +44,14 @@ public class MedicationController {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("No medication found with given id");
         }
     }
+
+    @DeleteMapping(path="/medications/{id}/delete")
+    public ResponseEntity<String> deleteMedication(@PathVariable Long id) {
+        try{
+            medicationService.deleteMedication(id);
+            return ResponseEntity.ok("Medication with id " + id + " deleted");
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Medication not found");
+        }
+    }
 }

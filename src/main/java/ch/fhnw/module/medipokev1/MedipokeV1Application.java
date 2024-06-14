@@ -1,6 +1,5 @@
 package ch.fhnw.module.medipokev1;
 
-import ch.fhnw.module.medipokev1.Data.Domain.Brand;
 import ch.fhnw.module.medipokev1.Data.Domain.Medication;
 import ch.fhnw.module.medipokev1.Data.Domain.User;
 import ch.fhnw.module.medipokev1.business.MedicationService;
@@ -38,7 +37,14 @@ public class MedipokeV1Application {
         userService.addUser(user3);
 
         Medication medication0 = new Medication("Stomach ache", Medication.DistributionCategory.D, Medication.AdministrationType.TABLETS, "1000mg", "Dafalgan", "Paracetamol");
+        Medication medication1 = new Medication("Stomach ache, sleepyness", Medication.DistributionCategory.D, Medication.AdministrationType.TABLETS, "500mg", "Tylenol", "Paracetamol");
+        Medication medication2 = new Medication("Dizziness", Medication.DistributionCategory.C, Medication.AdministrationType.TABLETS, "10mg", "Buscopan", "Hyoscine butylbromide");
+        Medication medication3 = new Medication("Stomach ache, dizziness", Medication.DistributionCategory.D, Medication.AdministrationType.TABLETS, "1000mg", "DuoFer", "Iron-Fumarate, Iron-Gluconate, Vitamin C");
+
         medicationService.addMedication(medication0);
+        medicationService.addMedication(medication1);
+        medicationService.addMedication(medication2);
+        medicationService.addMedication(medication3);
 
         //List<User> userList = new ArrayList();
         //userList.add(user0);

@@ -1,6 +1,5 @@
 package ch.fhnw.module.medipokev1.Data.Repository;
 
-import ch.fhnw.module.medipokev1.Data.Domain.Brand;
 import ch.fhnw.module.medipokev1.Data.Domain.Medication;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

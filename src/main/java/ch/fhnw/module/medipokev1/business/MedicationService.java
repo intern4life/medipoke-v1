@@ -34,4 +34,11 @@ public class MedicationService {
             throw new RuntimeException("Medication with id " + id + " not found");
         }
     }
+
+    public void deleteMedication(Long id) throws Exception {
+        if(medicationRepository.existsById(id)) {
+            medicationRepository.deleteById(id);
+        } else
+            throw new Exception("Medication with id " + id + " does not exist");
+    }
 }
