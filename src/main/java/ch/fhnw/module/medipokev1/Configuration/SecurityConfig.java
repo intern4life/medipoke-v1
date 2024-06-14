@@ -29,8 +29,9 @@ public class SecurityConfig {
                 .authorizeHttpRequests((authorize) -> authorize
                         .requestMatchers("/nogreeting", "/medications").hasRole("USER")
                         .requestMatchers("/admin", "/users", "/users/**", "/medications/create", "/medications/{id}/delete", "/h2-console/**", "/reminders").hasRole("ADMIN")
-                        .requestMatchers("/**", "/greeting", "/swagger-ui.html", "/v1/api-docs/**", "/swagger-ui/**").permitAll()
-                        .anyRequest().denyAll()
+                        .requestMatchers("/**", "/greeting", "/swagger-ui.html", "/v1/api-docs/**", "/swagger-ui/**", "/login/**").permitAll()
+                        //.anyRequest().hasAuthority("SCOPE_READ")
+                        //.anyRequest().denyAll()
                         //.anyRequest().authenticated()
                 )
                 .httpBasic(Customizer.withDefaults())
@@ -46,12 +47,14 @@ public class SecurityConfig {
                 .username("simpleboy")
                 .password("123")
                 .roles("USER")
+                .authorities("READ","ROLE_USER")
                 .build();
 
         UserDetails userDetails2 = User.withDefaultPasswordEncoder()
                 .username("adminboy")
                 .password("1234")
                 .roles("ADMIN")
+                .authorities("READ","ROLE_ADMIN")
                 .build();
 
         userDetails.add(userDetails1);
