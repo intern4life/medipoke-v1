@@ -30,21 +30,20 @@ public class Medication {
     @Hidden
     @Column(name = "id", nullable = false)
     private Long id;
-    @Column(name = "side_effects")
-    private String sideEffects;
-    @Column(name = "distribution_category")
-    private DistributionCategory distributionCategory;
-    @Column(name = "administration_type")
-    private AdministrationType administrationType;
-    @Column(name = "dosage")
-    private String dosage;
+    @Column(name = "producer")
+    private String producer;
     @Column(name = "brand")
     private String brand;
     @Column(name = "chemical_substance")
     private String chemicalSubstance;
-
-    @Column(name = "producer")
-    private String producer;
+    @Column(name = "administration_type")
+    private AdministrationType administrationType;
+    @Column(name = "dosage")
+    private String dosage;
+    @Column(name = "side_effects")
+    private String sideEffects;
+    @Column(name = "distribution_category")
+    private DistributionCategory distributionCategory;
 
     public Medication(String producer, String brand, String chemicalSubstance, Medication.AdministrationType administrationType, String dosage, String sideEffects, Medication.DistributionCategory distributionCategory) {
         this.producer = producer;
