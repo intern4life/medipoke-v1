@@ -44,6 +44,9 @@ MediPoke is a user-friendly application platform designed to help individuals ma
 ### Backend Technology
 
 ### Frontend Technology
+
+One of MediPoke's specialties is that the administrator can easily access the Medication Database. Through the "AdminMedicationOverview" screen, the administrator can get an overview of all the medications listed in the database. Additionally, the administrator can easily add new medications to the database using the new medication form provided on the screen.
+
 <img width="1165" alt="image" src="https://github.com/intern4life/medipoke-v1/assets/161694712/786b8502-1bfe-4068-b20c-e94b300bce70">
 
 
