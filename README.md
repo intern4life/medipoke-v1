@@ -45,9 +45,30 @@ MediPoke is a user-friendly application platform designed to help individuals ma
 
 ### Frontend Technology
 
-One of MediPoke's specialties is that the administrator can easily access the Medication Database. Through the "AdminMedicationOverview" screen, the administrator can get an overview of all the medications listed in the database. Additionally, the administrator can easily add new medications to the database using the new medication form provided on the screen.
+As mentioned before, for building the frontend we used as demanded budibase. The picture below shows the home screen for the user "patient" of MediPoke.
+
+<img width="1151" alt="image" src="https://github.com/intern4life/medipoke-v1/assets/161694712/e699f1e1-9270-4ff8-aa87-94b08cd1d3f0">
+
+List of the different screens with the used Queries:
+
+Login:
+New User:
+Home Screen:
+My Profile:
+My Reminders:
+Medication Overview:
+Admin Login:
+Admin Home Screen:
+Admin Patient Overview:
+Admin Medication Overview:
+Admin Reminders Overview:
+Contact Us
+
+One of MediPoke's main features is that the administrator can easily access the Patient Database. Through the "AdminPatientOverview" screen, the administrator can get an overview of all the patients listed in the database. Additionally, the administrator can easily add new patients to the database using the new patient form provided on the screen.
 
 <img width="1165" alt="image" src="https://github.com/intern4life/medipoke-v1/assets/161694712/786b8502-1bfe-4068-b20c-e94b300bce70">
+
+If the administrator is informed that a patient is obsolete in the database, they can select it. When the administrator clicks on the respective row a side panel is automatically opened for the deletion process. The details of the selected patient will be displayed in a new form within the side panel. The administrator can review the patient's information and choose to delete it or cancel the process. When the delete button is clicked, the administrator will receive a notification asking for confirmation to delete the entry. Upon acceptance, the patient entry is deleted, and the table is refreshed.
 
 <img width="916" alt="image" src="https://github.com/intern4life/medipoke-v1/assets/161694712/7be77fc1-423c-4873-b1d3-c85a485746f3">
 
