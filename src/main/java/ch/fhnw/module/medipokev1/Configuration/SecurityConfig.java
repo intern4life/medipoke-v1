@@ -27,9 +27,9 @@ public class SecurityConfig {
                 .csrf(csrf -> csrf.disable())
                 //TODO: when logged-in with a certain user, you cannot access pages accessible via another user type. Is this authentication hierarchy ADMIN > USER?
                 .authorizeHttpRequests((authorize) -> authorize
-                        .requestMatchers("/nogreeting").hasRole("USER")
-                        //.requestMatchers("/admin", "/users/**", "/users", "/h2-console/**").hasRole("ADMIN")
-                        .requestMatchers("/**", "/greeting", "/swagger-ui.html", "/v1/api-docs/**", "/swagger-ui/**").permitAll()
+                        .requestMatchers("/nogreeting", "/users/{id}").hasRole("USER")
+                        .requestMatchers("/admin", "/users/**", "/medications/create", "/medications/delete", "/h2-console/**").hasRole("ADMIN")
+                        .requestMatchers("/**", "/greeting", "/swagger-ui.html", "/v1/api-docs/**", "/swagger-ui/**", "/medications").permitAll()
                         .anyRequest().denyAll()
                         //.anyRequest().authenticated()
                 )
