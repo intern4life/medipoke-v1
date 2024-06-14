@@ -31,7 +31,7 @@ public class MedipokeV1Application {
     private void initPlaceholderData() throws Exception {
         //Users creation
         User user0 =  new User("Jon", "Wick", User.UserRole.ADMIN, "01/06/2000", User.Gender.MALE, "jon@wick.ch", "+41 79 444 44 33");
-        User user1 =  new User("Jane", "Beautist", User.UserRole.PATIENT, "09/10/1990", User.Gender.FEMALE, "jane@beautist.ch", "+41 79 666 70 00");
+        User user1 =  new User("Jane", "Beautiste", User.UserRole.PATIENT, "09/10/1990", User.Gender.FEMALE, "jane@beautiste.ch", "+41 79 666 70 00");
         User user2 =  new User("Johanna", "Marley", User.UserRole.ADMIN, "30/12/1974", User.Gender.FEMALE, "johanna@marley.com", "+41 78 563 33 20");
         User user3 =  new User("Bob", "Dillon", User.UserRole.PATIENT, "11/08/2002", User.Gender.MALE, "asdf@ad.de", "+41 78 420 90 33");
         userService.addUser(user0);
@@ -55,10 +55,13 @@ public class MedipokeV1Application {
         medicationService.addMedication(medication3);
 
         //Notifications creation
-        Reminder reminder0 = new Reminder("Hello John, don't forget to take your medication after lunch today!");
+        Reminder reminder0 = new Reminder("Hello Bob Dillon, don't forget to take your Dafalgan 1000mg medication before lunch today!");
+        Reminder reminder1 = new Reminder("Hello Jane Beautiste, don't forget to take your Buscopan 10mg medication before lunch today! You should take it with a glass of water.");
+        Reminder reminder2 = new Reminder("Hello Bob Dillon, don't forget to take your Dafalgan 500mg medication before dinner today!");
         reminderService.addReminder(reminder0);
-        /*
         reminderService.addReminder(reminder1);
+        reminderService.addReminder(reminder2);
+        /*
         reminderService.addReminder(reminder2);
         reminderService.addReminder(reminder3);
         */
