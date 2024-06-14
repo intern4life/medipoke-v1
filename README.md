@@ -33,6 +33,7 @@ MediPoke is a user-friendly application platform designed to help individuals ma
 ## Design
 
 ### Prototype
+![Wireframe_MediPoke_Welcome Screen](https://github.com/intern4life/medipoke-v1/assets/168071156/d9519d01-d1f4-42e0-a818-0d49d4364bfe)
 
 
 ### Domain Design
