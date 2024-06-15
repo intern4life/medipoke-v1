@@ -72,7 +72,8 @@ List of the different screens with the used Queries:
 
 One of MediPoke's main features is that the administrator can easily access the Patient Database. Through the "AdminPatientOverview" screen, the administrator can get an overview of all the patients listed in the database. Additionally, the administrator can easily add new patients to the database using the new patient form provided on the screen.
 
-<img width="1165" alt="image" src="https://github.com/intern4life/medipoke-v1/assets/161694712/786b8502-1bfe-4068-b20c-e94b300bce70">
+![image](https://github.com/intern4life/medipoke-v1/assets/161694712/5cf13508-2cde-4930-9ec3-f7812134d465)
+
 
 If the administrator is informed that a patient is obsolete in the database, they can select it. When the administrator clicks on the respective row a side panel is automatically opened for the deletion process. The details of the selected patient will be displayed in a new form within the side panel. The administrator can review the patient's information and choose to delete it or cancel the process. When the delete button is clicked, the administrator will receive a notification asking for confirmation to delete the entry. Upon acceptance, the patient entry is deleted, and the table is refreshed.
 
