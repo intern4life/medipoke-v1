@@ -52,6 +52,7 @@ The design aims for intuitiveness and ease-of-use, so that every user can quickl
 The reason that this verification happens on the email and phone number is because these must be unique. Multiple users could have the same names, but their contact details must be unique.
 
 Method addUser() in the file UserService.java
+
 ```
 public User addUser(User user) throws Exception {
         if (user.getFirstName() != null) {
@@ -67,29 +68,29 @@ public User addUser(User user) throws Exception {
 ## Implementation
 ### Backend Technology
 This Web application is relying on Spring Boot and the following dependencies:
-
-    Spring Boot
-    Spring Data
-    Java Persistence API (JPA)
-    H2 Database Engine
+	Spring Boot
+	Spring Data
+	Java Persistence API (JPA)
+	H2 Database Engine
 
 Then, the following further dependencies have been added to the project pom.xml:
 
-    DB:
-
+DB:
+```
 <dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
 			<scope>runtime</scope>
 </dependency>
-
-    SWAGGER:
-
+```
+SWAGGER:
+```
    <dependency>
       <groupId>org.springdoc</groupId>
       <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
       <version>2.3.0</version>
    </dependency>
+```
 
 ### Frontend Technology
 
