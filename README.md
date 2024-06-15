@@ -139,8 +139,7 @@ https://medipoke-v1-latest.onrender.com
 
 IMPORTANT NOTICE: Render is a VERY slow Paas but it is free. Despite the Medipoke web serivce being published on Render, non-cached requests after a while will take an incredibly long time to load, if they load at all. It is advised, that you run the project locally. Alternatively, you can email either <david.duran@students.fhnw.ch> or <nathalie.meyer@students.fhnw.ch> to restart the render deployment and thereby accelerate API requests for a short while.
 
-<img width="1146" alt="Screenshot 2024-03-05 at 13 33 59" src="https://github.com/intern4life/medipoke-v1/assets/161823256/48d0c9eb-f157-4086-bade-9c2d4ebfa41c">
-
+<img width="2037" alt="Screenshot 2024-06-15 at 21 44 21" src="https://github.com/intern4life/medipoke-v1/assets/161823256/a43d63fd-bd0e-4b8a-8089-b36365a1adc9">
 
 
 ## Project Management
