@@ -95,9 +95,9 @@ https://medipoke-v1-latest.onrender.com
 
 ## Project Management
 ### Roles
-Back-end developer: David Duran
-Front-end developer: Nathalie Meyer, Naomi Rocha dos Santos
-Supporting Documentation: David Duran, Naomi Rocha dos Santos, Nathalie Meyer, Amit Jagubhai
+1. Back-end developer: David Duran
+2. Front-end developer: Nathalie Meyer, Naomi Rocha dos Santos
+3. Supporting Documentation: David Duran, Naomi Rocha dos Santos, Nathalie Meyer, Amit Jagubhai
 
 ### Milestones [David]
 1. **Analysis**: Scenario ideation, use case analysis and user story writing.
