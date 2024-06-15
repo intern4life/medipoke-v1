@@ -51,7 +51,7 @@ The design aims for intuitiveness and ease-of-use, so that every user can quickl
 "Duplicate user creation" - The Medipoke API refuses the creation of users that already exist in the database. This is done by verifying the uniqueness of the new data entry and the exisitng email & phone number for exisitng users in the database. 
 The reason that this verification happens on the email and phone number is because these must be unique. Multiple users could have the same names, but their contact details must be unique.
 
-Method addUsers() in the file UserService.java
+Method addUser() in the file UserService.java
 ```
 public User addUser(User user) throws Exception {
         if (user.getFirstName() != null) {
@@ -136,6 +136,8 @@ Below find the link to the Docker image:
 https://hub.docker.com/r/bruderichhangnueg/medipoke-v1/tags
 and to our application:
 https://medipoke-v1-latest.onrender.com
+
+IMPORTANT NOTICE: Render is a VERY slow Paas but it is free. Despite the Medipoke web serivce being published on Render, non-cached requests after a while will take an incredibly long time to load, if they load at all. It is advised, that you run the project locally. Alternatively, you can email either <david.duran@students.fhnw.ch> or <nathalie.meyer@students.fhnw.ch> to restart the render deployment and thereby accelerate API requests for a short while.
 
 <img width="1146" alt="Screenshot 2024-03-05 at 13 33 59" src="https://github.com/intern4life/medipoke-v1/assets/161823256/48d0c9eb-f157-4086-bade-9c2d4ebfa41c">
 
