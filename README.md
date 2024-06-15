@@ -44,7 +44,7 @@ The design aims for intuitive, easy-to-use, so every user can quickly understand
 
 
 ### Domain Design
-![image](https://github.com/intern4life/medipoke-v1/assets/161694544/0eaf8266-1e5e-4ba0-a0e4-1f5e47f56c63)
+![image](https://github.com/intern4life/medipoke-v1/assets/161694544/16cc7bb5-86db-49f9-9175-2b5065a5b235)
 
 
 ### Business Logic [David]
