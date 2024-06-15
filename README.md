@@ -18,7 +18,7 @@
 
 ## Analysis
 ### Scenario
-MediPoke is an app that serves as a connecting link between patients and doctors. It enables doctors to monitor which patients have been reminded to take their medications regularly. Essentially, MediPoke is a monitoring application designed for doctors and administrators (Health care provider). ##Thus improving communication and collaboration between health care providers and patients.##
+MediPoke is an app that serves as a connecting link between patients and doctors. It enables doctors to monitor which patients have been reminded to take their medication. Essentially, MediPoke is a monitoring application designed for doctors and administrators (Health care providers). It helps improving communication and collaboration between health care providers and patients and potentially streamlining the entire healthcare workflow. This centralized platform can help identify trends, optimize the medication management processes and improve resource allocation.
 
 ### User Stories
 1. As a user (Patient), I want to view all medications so that I can see what is available in the database.
@@ -29,12 +29,14 @@ MediPoke is an app that serves as a connecting link between patients and doctors
 ### Use Case
 
 ## Design
+The design aims for intuitive, easy-to-use, so every user can quickly understand where to find the information they are looking for. The color scheme is adquate for a health care environment, the different shades of blue are calming/soothing and convey trustworthyness.
 
 ### Prototype
 ![Wireframe_MediPoke_Welcome Screen](https://github.com/intern4life/medipoke-v1/assets/168071156/d9519d01-d1f4-42e0-a818-0d49d4364bfe)
 
 
 ### Domain Design
+
 
 ### Business Logic
 
