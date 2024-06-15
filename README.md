@@ -40,6 +40,10 @@ The design aims for intuitive, easy-to-use, so every user can quickly understand
 
 
 ### Business Logic
+"Admin Medication Overview" - existing medication can be deleted, new medication can be added. When the "Delete" button is clicked, a message pops up, asking the admin if the record should really be deleted. The admin has to confirm or cancel.
+Path: [/api/]
+Param: value="Medication" Admitted value: "Delete","Cancel".
+Method: DEL
 
 ## Implementation
 ### Backend Technology
