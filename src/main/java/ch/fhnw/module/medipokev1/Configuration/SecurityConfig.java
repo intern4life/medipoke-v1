@@ -22,7 +22,6 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
-
                 //.securityMatcher("/api/**")
                 .csrf(csrf -> csrf.disable())
                 //TODO: when logged-in with a certain user, you cannot access pages accessible via another user type. Is this authentication hierarchy ADMIN > USER?
