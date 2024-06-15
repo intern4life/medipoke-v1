@@ -83,6 +83,9 @@ The "Admin Medication Overview" shows all the medications available in the MediP
 
 ### Deployment to a PaaS
 
+![image](https://github.com/intern4life/medipoke-v1/assets/161694712/f2d92ee9-7285-46af-a4c5-79141f0587da)
+
+
 ## Project Management
 
 ### Roles
