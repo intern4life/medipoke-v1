@@ -24,9 +24,10 @@ MediPoke is an app that serves as a connecting link between patients and doctors
 1. As a user (Patient), I want to view all medications so that I can see what is available in the database.
 2. As an admin (Health care provider), I want to create/update/delete new/existing users (Patient).
 3. As an admin (Health care provider), I want to view/create/delete all medications in the database so that available options can be managed.
-4. As an admin (Health care provider), I want to set notification to a selected user for a medication in the database so that the user receives notification on the assigned time.
+4. As an admin (Health care provider), I want to set a reminder to a selected user for a medication in the database.
 
 ### Use Case
+
 
 ## Design
 The design aims for intuitive, easy-to-use, so every user can quickly understand where to find the information they are looking for. The color scheme is adquate for a health care environment, the different shades of blue are calming/soothing and convey trustworthyness.
@@ -39,14 +40,14 @@ The design aims for intuitive, easy-to-use, so every user can quickly understand
 ![image](https://github.com/intern4life/medipoke-v1/assets/161694544/0eaf8266-1e5e-4ba0-a0e4-1f5e47f56c63)
 
 
-### Business Logic
+### Business Logic [David]
 "Admin Medication Overview" - existing medication can be deleted, new medication can be added. When the "Delete" button is clicked, a message pops up, asking the admin if the record should really be deleted. The admin has to confirm or cancel.
-Path: [/api/]
+Path: [/api/] - [David]
 Param: value="Medication" Admitted value: "Delete","Cancel".
 Method: DEL
 
 ## Implementation
-### Backend Technology
+### Backend Technology [David]
 
 ### Frontend Technology
 
@@ -79,7 +80,7 @@ If the administrator is informed that a patient is obsolete in the database, the
 The "Admin Medication Overview" shows all the medications available in the MediPoke database. As mentioned previously, the admin has the possibility to add to or delete medications from the database. With this screen we want to explain all the "Add" actions on the row click actions. The admin selects a row by clicking on it, the side pannel opens as this is the first click action in actions set. The subsequent actions set entries, 2 to 8, take the value from the "Medication Overview Table" and populates the side panel "Delete Medication Form". Action 9 updates the state of the "Row Id", making it dynamic.
 <img width="1166" alt="image" src="https://github.com/intern4life/medipoke-v1/assets/161694712/98b5a597-4fbf-4f01-80fb-7b06738645da">
 
-## Execution
+## Execution [David]
 Please describe how to execute your app and what configurations must be changed to run it
 
 ### Deployment to a PaaS
@@ -98,14 +99,14 @@ Back-end developer: David Duran
 Front-end developer: Nathalie Meyer, Naomi Rocha dos Santos
 Supporting Documentation: David Duran, Naomi Rocha dos Santos, Nathalie Meyer, Amit Jagubhai
 
-### Milestones
+### Milestones [David]
 1. **Analysis**: Scenario ideation, use case analysis and user story writing.
 2. **Prototype Design**: Creation of wireframe and prototype.
 3. **Domain Design**: Definition of domain model.
 4. **Business Logic and API Design**: Definition of business logic and API.
 5. **Data and API Implementation**: Implementation of data access and business logic layers, and API.
 6. **Security and Frontend Implementation**: Integration of security framework and frontend realisation.
-7. **Deployment**: Deployment of Web application on cloud infrastructure.
+7. **Deployment**: Deployment of Web application on cloud infrastructure. [David]
 
 ### Maintainer
 David Duran, Nathalie Meyer, Naomi Rocha dos Santos, Amit Jagubhai
