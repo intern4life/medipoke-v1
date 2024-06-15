@@ -52,16 +52,16 @@ As mentioned before, for building the frontend we used as demanded budibase. The
 
 List of the different screens with the used Queries:
 
-Login: GET Login test - if a patient already has an account they can log in and will be taken to the "Home Screen". If they don't have an account, they can click on the "Sign up" button and will be taken to the "New User" screen. The admin has to click on the "Admin Login" button, where they will be taken to the "Admin Login" screen.
-New User: POST Create New User with Bindings - the patient has to fill in all the required information and click on the "Add" button, they will be taken to the "Home Screen".
-Home Screen: The patient can navigate using the navigation pannel or the tiles.
-Medication Overview: GET Medications - the patient has an overview of all medications in the MediPoke database.
-Admin Login: GET Admin Login test - the admin has to enter his credentials and will be taken to the "Admin Home Screen".
-Admin Home Screen: The admin can navigate using the navigation pannel or the tiles and will be taken to the respective screens, or they can log out.
-Admin Patient Overview: GET medipoke-v1-latest_onrender_com users - admin sees the table where all patients and their information are listed. If they click on a patient (row) a side pannel will appear and there patient information can be deleted or updated (PUT Update Single User, DEL User).
-Admin Medication Overview: GET/DEL Medications & POST Create Medication with Bindings, the admin has a table with all medications and they can add new medication and using the side pannel also delete medication entries.
-Admin Reminders Overview: GET Reminders, the admin gets a list with all reminders (with timestamp).
-Contact Us: Contains MediPoke contact details.
+1. Login: GET Login test - if a patient already has an account they can log in and will be taken to the "Home Screen". If they don't have an account, they can click on the "Sign up" button and will be taken to the "New User" screen. The admin has to click on the "Admin Login" button, where they will be taken to the "Admin Login" screen.
+2. New User: POST Create New User with Bindings - the patient has to fill in all the required information and click on the "Add" button, they will be taken to the "Home Screen".
+3. Home Screen: The patient can navigate using the navigation pannel or the tiles.
+4. Medication Overview: GET Medications - the patient has an overview of all medications in the MediPoke database.
+5. Admin Login: GET Admin Login test - the admin has to enter his credentials and will be taken to the "Admin Home Screen".
+6. Admin Home Screen: The admin can navigate using the navigation pannel or the tiles and will be taken to the respective screens, or they can log out.
+7. Admin Patient Overview: GET medipoke-v1-latest_onrender_com users - admin sees the table where all patients and their information are listed. If they click on a patient (row) a side pannel will appear and there patient information can be deleted or updated (PUT Update Single User, DEL User).
+8. Admin Medication Overview: GET/DEL Medications & POST Create Medication with Bindings, the admin has a table with all medications and they can add new medication and using the side pannel also delete medication entries.
+9. Admin Reminders Overview: GET Reminders, the admin gets a list with all reminders (with timestamp).
+10. Contact Us: Contains MediPoke contact details.
 
 One of MediPoke's main features is that the administrator can easily access the Patient Database. Through the "AdminPatientOverview" screen, the administrator can get an overview of all the patients listed in the database. Additionally, the administrator can easily add new patients to the database using the new patient form provided on the screen.
 
