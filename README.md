@@ -18,13 +18,13 @@
 
 ## Analysis
 ### Scenario
-MediPoke is an app that serves as a connecting link between patients and doctors. It enables doctors to monitor which patients have been reminded to take their medication. Essentially, MediPoke is a monitoring application designed for doctors and administrators (Health care providers). It helps improving communication and collaboration between health care providers and patients and potentially streamlining the entire healthcare workflow. This centralized platform can help identify trends, optimize the medication management processes and improve resource allocation.
+MediPoke is an app that serves as a connecting link between patients and doctors. It enables doctors to monitor which patients have been reminded to take their medication. Essentially, MediPoke is a monitoring application designed for doctors and administrators (Health care providers). This centralized platform can help accelerate patient recovery time, identify trends, optimize the medication management processes and improve resource allocation.
 
 ### User Stories
-1. As a user (Patient), I want to view all medications so that I can see what is available in the database.
-2. As an admin (Health care provider), I want to create/update/delete new/existing users (Patient).
-3. As an admin (Health care provider), I want to view/create/delete all medications in the database so that available options can be managed.
-4. As an admin (Health care provider), I want to set a reminder to a selected user for a medication in the database.
+1. As a public user (unauthenticated), I want to view all medications, so that I can see what is available in the Medipoke database.
+2. As an admin (medical practitioner), I want to view/create/update/delete users (patients) via http request methods.
+3. As an admin (medical practitioner), I want to view/create/delete all medications in the database so that available options can be managed.
+4. As an admin (medical practitioner), I want to view/create/delete a medication reminder for a selected user.
 
 ### Use Case
 ![image](https://github.com/intern4life/medipoke-v1/assets/161694544/6ee6c063-c28b-44ec-a57b-855a8dcf2d2d)
@@ -37,7 +37,7 @@ MediPoke is an app that serves as a connecting link between patients and doctors
 
 
 ## Design
-The design aims for intuitive, easy-to-use, so every user can quickly understand where to find the information they are looking for. The color scheme is adquate for a health care environment, the different shades of blue are calming/soothing and convey trustworthyness.
+The design aims for intuitiveness and ease-of-use, so that every user can quickly understand where to find the information they are looking for. The color scheme is adquate for a health care environment, the different shades of blue are calming/soothing and convey trustworthyness.
 
 ### Prototype
 ![Wireframe_MediPoke_Welcome Screen](https://github.com/intern4life/medipoke-v1/assets/168071156/d9519d01-d1f4-42e0-a818-0d49d4364bfe)
@@ -47,7 +47,8 @@ The design aims for intuitive, easy-to-use, so every user can quickly understand
 ![image](https://github.com/intern4life/medipoke-v1/assets/161694544/16cc7bb5-86db-49f9-9175-2b5065a5b235)
 
 
-### Business Logic [David]
+### Business Logic
+"Duplicate user creation" - The Medipoke API refuses the creation of users that already exist in the database. This is done by verifying the uniqueness of the new data entry and the exisitng email & phone number for exisitng users in the database. (see line 19 in the file UserService.java)
 "Admin Medication Overview" - existing medication can be deleted, new medication can be added. When the "Delete" button is clicked, a message pops up, asking the admin if the record should really be deleted. The admin has to confirm or cancel.
 Path: [/api/] - [David]
 Param: value="Medication" Admitted value: "Delete","Cancel".
@@ -89,17 +90,24 @@ If the administrator is informed that a patient is obsolete in the database, the
 The "Admin Medication Overview" shows all the medications available in the MediPoke database. As mentioned previously, the admin has the possibility to add to or delete medications from the database. With this screen we want to explain all the "Add" actions on the row click actions. The admin selects a row by clicking on it, the side pannel opens as this is the first click action in actions set. The subsequent actions set entries, 2 to 8, take the value from the "Medication Overview Table" and populates the side panel "Delete Medication Form". Action 9 updates the state of the "Row Id", making it dynamic.
 <img width="1166" alt="image" src="https://github.com/intern4life/medipoke-v1/assets/161694712/98b5a597-4fbf-4f01-80fb-7b06738645da">
 
-## Execution [David]
-Please describe how to execute your app and what configurations must be changed to run it
+## Execution
+1. Clone this repository to your local machine and open it in your IDE (we used IntelliJ)
+2. Alternatively, you can just download our dockerized our app at https://hub.docker.com/r/bruderichhangnueg/medipoke-v1/tags
+3. Ensure that your local application's Maven setup is in accordance with this repository's pom.xml file
+4. Start the app from the IDE
+5. The Medipoke webservice should be running locally at 127.0.0.1 on the port 8080
+6. Open your prefered browser and navigate to [http:](localhost:8080/swagger-ui.html)
+7. Perform any of the listed API requests either via cURL or Postman. We have hardcoded two users - adminboy:1234 and simpleboy:123
 
 ### Deployment to a PaaS
-As suggested, Render was used.
-Below find the link to the Docker:
+As suggested, Render was used to deploy the webapp API using a dockerized image of our local setup.
+Below find the link to the Docker image:
 https://hub.docker.com/r/bruderichhangnueg/medipoke-v1/tags
 and to our application:
 https://medipoke-v1-latest.onrender.com
 
-![image](https://github.com/intern4life/medipoke-v1/assets/161694712/f2d92ee9-7285-46af-a4c5-79141f0587da)
+<img width="1146" alt="Screenshot 2024-03-05 at 13 33 59" src="https://github.com/intern4life/medipoke-v1/assets/161823256/48d0c9eb-f157-4086-bade-9c2d4ebfa41c">
+
 
 
 ## Project Management
@@ -108,14 +116,13 @@ https://medipoke-v1-latest.onrender.com
 2. Front-end developer: Nathalie Meyer, Naomi Rocha dos Santos
 3. Supporting Documentation: David Duran, Naomi Rocha dos Santos, Nathalie Meyer, Amit Jagubhai
 
-### Milestones [David]
+### Milestones
 1. **Analysis**: Scenario ideation, use case analysis and user story writing.
 2. **Prototype Design**: Creation of wireframe and prototype.
 3. **Domain Design**: Definition of domain model.
 4. **Business Logic and API Design**: Definition of business logic and API.
 5. **Data and API Implementation**: Implementation of data access and business logic layers, and API.
 6. **Security and Frontend Implementation**: Integration of security framework and frontend realisation.
-7. **Deployment**: Deployment of Web application on cloud infrastructure. [David]
 
 ### Maintainer
 David Duran, Nathalie Meyer, Naomi Rocha dos Santos, Amit Jagubhai
