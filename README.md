@@ -80,12 +80,20 @@ The "Admin Medication Overview" shows all the medications available in the MediP
 <img width="1166" alt="image" src="https://github.com/intern4life/medipoke-v1/assets/161694712/98b5a597-4fbf-4f01-80fb-7b06738645da">
 
 ## Execution
+Please describe how to execute your app and what configurations must be changed to run it
 
 ### Deployment to a PaaS
+As suggested, Render was used.
+Below find the link to the Docker:
+https://hub.docker.com/r/bruderichhangnueg/medipoke-v1/tags
+and to our application:
+https://medipoke-v1-latest.onrender.com
 
 ## Project Management
-
 ### Roles
+Back-end developer: David Duran
+Front-end developer: Nathalie Meyer, Naomi Rocha dos Santos
+Supporting Documentation: David Duran, Naomi Rocha dos Santos, Nathalie Meyer, Amit Jagubhai
 
 ### Milestones
 1. **Analysis**: Scenario ideation, use case analysis and user story writing.
@@ -94,10 +102,13 @@ The "Admin Medication Overview" shows all the medications available in the MediP
 4. **Business Logic and API Design**: Definition of business logic and API.
 5. **Data and API Implementation**: Implementation of data access and business logic layers, and API.
 6. **Security and Frontend Implementation**: Integration of security framework and frontend realisation.
-7. (optional) **Deployment**: Deployment of Web application on cloud infrastructure.
+7. **Deployment**: Deployment of Web application on cloud infrastructure.
+
+### Maintainer
+David Duran, Nathalie Meyer, Naomi Rocha dos Santos, Amit Jagubhai
 
 #### License
-
+https://www.apache.org/licenses/LICENSE-2.0.html
 
 
 
