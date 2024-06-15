@@ -1,6 +1,5 @@
 # medipoke-v1 ![MEDIPOKE](https://github.com/intern4life/medipoke-v1/assets/168071156/7018ea06-df69-402c-a6c8-f1b8b336bbae)
 
-MediPoke is a user-friendly application platform designed to help individuals manage their medication schedules effectively. Developed as a group project for the Internet Technology course at FHNW, MediPoke delivers personalised reminders to ensure users never miss a dose.
 #### Contents:
 - [Analysis](#analysis)
   - [Scenario](#scenario)
@@ -19,14 +18,13 @@ MediPoke is a user-friendly application platform designed to help individuals ma
 
 ## Analysis
 ### Scenario
-MediPoke is an app that serves as a connecting link between patients and doctors. It enables doctors to monitor which patients have been reminded to take their medications regularly. Essentially, MediPoke is a monitoring application designed for doctors and administrators.
+MediPoke is an app that serves as a connecting link between patients and doctors. It enables doctors to monitor which patients have been reminded to take their medications regularly. Essentially, MediPoke is a monitoring application designed for doctors and administrators (Health care provider). ##Thus improving communication and collaboration between health care providers and patients.##
 
 ### User Stories
-1. As a user, I want to view all my medications so that I can see what I need to take and when.
-2. As a user, I want to view my reminders so that I can see my upcoming medication schedule.
-3. As an admin, I want to create/update/delete new/existing users
-4. As an admin, I want to view all medications in the database so that I can manage the available options.
-5. As an admin, I want to set notification to a selected user for a medication in the database so that the user receives notification on the assigned time.
+1. As a user (Patient), I want to view all medications so that I can see what is available in the database.
+2. As an admin (Health care provider), I want to create/update/delete new/existing users (Patient).
+3. As an admin (Health care provider), I want to view/create/delete all medications in the database so that available options can be managed.
+4. As an admin (Health care provider), I want to set notification to a selected user for a medication in the database so that the user receives notification on the assigned time.
 
 ### Use Case
 
