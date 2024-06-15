@@ -114,6 +114,7 @@ David Duran, Nathalie Meyer, Naomi Rocha dos Santos, Amit Jagubhai
 #### License
 https://www.apache.org/licenses/LICENSE-2.0.html
 
+![image](https://github.com/intern4life/medipoke-v1/assets/161694544/a82bdd1b-0cf2-49c4-a8ed-19cd8c0d7254)
 
 
 
