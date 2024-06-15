@@ -71,7 +71,7 @@ If the administrator is informed that a patient is obsolete in the database, the
 
 <img width="916" alt="image" src="https://github.com/intern4life/medipoke-v1/assets/161694712/7be77fc1-423c-4873-b1d3-c85a485746f3">
 
-
+The "Admin Medication Overview" shows all the medications available in the MediPoke database. As mentioned previously, the admin has the possibility to add to or delete medications from the database. With this screen we want to explain all the "Add" actions on the row click actions. The admin selects a row by clicking on it, the side pannel opens as this is the first click action in actions set. The subsequent actions set entries, 2 to 8, take the value from the "Medication Overview Table" and populates the side panel "Delete Medication Form". Action 9 updates the state of the "Row Id", making it dynamic.
 <img width="1166" alt="image" src="https://github.com/intern4life/medipoke-v1/assets/161694712/98b5a597-4fbf-4f01-80fb-7b06738645da">
 
 ## Execution
