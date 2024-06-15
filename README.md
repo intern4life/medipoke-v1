@@ -27,6 +27,13 @@ MediPoke is an app that serves as a connecting link between patients and doctors
 4. As an admin (Health care provider), I want to set a reminder to a selected user for a medication in the database.
 
 ### Use Case
+![image](https://github.com/intern4life/medipoke-v1/assets/161694544/6ee6c063-c28b-44ec-a57b-855a8dcf2d2d)
+![image](https://github.com/intern4life/medipoke-v1/assets/161694544/675f1f17-b653-4f9d-8880-a2eefa746eff)
+![image](https://github.com/intern4life/medipoke-v1/assets/161694544/ad7c58f6-3c25-4810-8283-3cbcda5a1b49)
+![image](https://github.com/intern4life/medipoke-v1/assets/161694544/d7188315-39fb-4e3b-a33a-a91baeb23a01)
+![image](https://github.com/intern4life/medipoke-v1/assets/161694544/d19d2cba-1450-403b-9306-49a0385464d1)
+![image](https://github.com/intern4life/medipoke-v1/assets/161694544/67ea5c7b-5afe-41b7-a19f-ec9e443963b0)
+
 
 
 ## Design
