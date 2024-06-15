@@ -2,9 +2,11 @@ package ch.fhnw.module.medipokev1;
 
 import ch.fhnw.module.medipokev1.Data.Domain.Medication;
 import ch.fhnw.module.medipokev1.Data.Domain.Reminder;
+import ch.fhnw.module.medipokev1.Data.Domain.Schedule;
 import ch.fhnw.module.medipokev1.Data.Domain.User;
 import ch.fhnw.module.medipokev1.business.MedicationService;
 import ch.fhnw.module.medipokev1.business.ReminderService;
+import ch.fhnw.module.medipokev1.business.ScheduleService;
 import ch.fhnw.module.medipokev1.business.UserService;
 import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +24,8 @@ public class MedipokeV1Application {
     private MedicationService medicationService;
     @Autowired
     private ReminderService reminderService;
+    @Autowired
+    private ScheduleService scheduleService;
 
     public static void main(String[] args) {
         SpringApplication.run(MedipokeV1Application.class, args);
@@ -55,18 +59,20 @@ public class MedipokeV1Application {
         medicationService.addMedication(medication3);
 
         //Notifications creation
-        Reminder reminder0 = new Reminder("Hello Bob Dillon, don't forget to take your Dafalgan 1000mg medication before lunch today!");
-        Reminder reminder1 = new Reminder("Hello Jane Beautiste, don't forget to take your Buscopan 10mg medication before lunch today! You should take it with a glass of water.");
-        Reminder reminder2 = new Reminder("Hello Bob Dillon, don't forget to take your Dafalgan 500mg medication before dinner today!");
+        Reminder reminder0 = new Reminder("Hello " + user3.getFirstName() + " " + user3.getLastName() + ", don't forget to take your Dafalgan 1000mg medication before lunch today!", user3.getId());
+        Reminder reminder1 = new Reminder("Hello " + user1.getFirstName() + " " + user1.getLastName() + ", don't forget to take your Buscopan 10mg medication before lunch today! You should take it with a glass of water.", user1.getId());
+        Reminder reminder2 = new Reminder("Hello " + user3.getFirstName() + " " + user3.getLastName() + ", don't forget to take your Tylenol 500mg medication before dinner today!", user3.getId());
         reminderService.addReminder(reminder0);
         reminderService.addReminder(reminder1);
         reminderService.addReminder(reminder2);
-        /*
-        reminderService.addReminder(reminder2);
-        reminderService.addReminder(reminder3);
-        */
 
-
+        //Schedule creation
+        Schedule schedule0 = new Schedule(user3.getId(),medication0, Schedule.Frequency.BEFORE_LUNCH, "01/03/2024", "30/07/2024");
+        Schedule schedule1 = new Schedule(user1.getId(), medication2, Schedule.Frequency.BEFORE_LUNCH, "20/06/2024", "16/10/2024");
+        Schedule schedule2 = new Schedule(user3.getId(), medication1, Schedule.Frequency.BEFORE_DINNER, "01/03/2024", "30/07/2024");
+        scheduleService.addSchedule(schedule0);
+        scheduleService.addSchedule(schedule1);
+        scheduleService.addSchedule(schedule2);
     }
 
     @GetMapping(value="/")

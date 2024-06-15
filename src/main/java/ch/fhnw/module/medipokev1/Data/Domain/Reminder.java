@@ -17,6 +17,11 @@ public class Reminder {
     @Column(name = "id", nullable = false)
     private Long id;
 
+    //@ManyToOne
+    //@JoinColumn(name = "user_id")
+    @Column(name = "patient_Id")
+    private Long patientId;
+
     @Column(name = "reminder_timestamp", nullable = false, updatable = false)
     @CreationTimestamp
     private Date timestamp;
@@ -24,8 +29,9 @@ public class Reminder {
     @Column(name = "message")
     private String message;
 
-    public Reminder (String message){
+    public Reminder (String message, Long patientId){
         this.message = message;
+        this.patientId = patientId;
     }
 
     public Reminder (){
@@ -46,5 +52,13 @@ public class Reminder {
 
     public void setMessage(String message) {
         this.message = message;
+    }
+
+    public Long getPatientId() {
+        return patientId;
+    }
+
+    public void setPatientId(Long patientId) {
+        this.patientId = patientId;
     }
 }

@@ -8,4 +8,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface ReminderRepository extends JpaRepository<Reminder, Long> {
     Reminder findByMessage(String message);
+
 }
