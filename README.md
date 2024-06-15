@@ -53,7 +53,8 @@ Method: DEL
 
 As mentioned before, for building the frontend we used as demanded budibase. The picture below shows the home screen for the user "patient" of MediPoke.
 
-![image](https://github.com/intern4life/medipoke-v1/assets/161694712/40967538-0028-4280-bc43-e4f44d907404)
+![image](https://github.com/intern4life/medipoke-v1/assets/161694712/3d549c88-d1e8-43ed-aade-533ff795541b)
+
 
 
 List of the different screens with the used Queries:
